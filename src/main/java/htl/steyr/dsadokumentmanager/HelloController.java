@@ -8,6 +8,8 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 
 import java.io.File;
+import java.lang.reflect.Array;
+
 public class HelloController {
 
     @FXML
@@ -30,6 +32,15 @@ public class HelloController {
         } catch (Exception e) {
             textArea.setText("Fehler beim Laden oder Lesen der PDF-Datei:\n" + e.getMessage());
         }
+
+        String PDFContent = textArea.getText();
+        PDFContent = PDFContent.replaceAll("\n", ";")
+                .replaceAll(" ", ";").replaceAll("  ", ";")
+                .replaceAll("  ", ";").replaceAll("\t", ";")
+                .replaceAll(";;", ";").replaceAll(";;;", ";")
+                .replaceAll(";;;", ";").replaceAll(";;;;", ";")
+                .replaceAll(";;;;;", ";").replaceAll(";;;;;;", ";").replaceAll(",", "");
+        textArea.setText(PDFContent);
     }
 
     public void pathTextField(ActionEvent actionEvent) {
