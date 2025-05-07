@@ -34,12 +34,13 @@ public class HelloController {
         }
 
         String PDFContent = textArea.getText();
-        PDFContent = PDFContent.replaceAll("\n", ";")
-                .replaceAll(" ", ";").replaceAll("  ", ";")
-                .replaceAll("  ", ";").replaceAll("\t", ";")
-                .replaceAll(";;", ";").replaceAll(";;;", ";")
-                .replaceAll(";;;", ";").replaceAll(";;;;", ";")
-                .replaceAll(";;;;;", ";").replaceAll(";;;;;;", ";").replaceAll(",", "");
+        PDFContent = PDFContent
+                .replaceAll("   ", ";").replaceAll("  ", ";")
+                .replaceAll(" ", ";").replaceAll("\t", ";")
+                .replaceAll(";;;;;;;", ";").replaceAll(";;;;;;", ";")
+                .replaceAll(";;;;;", ";").replaceAll(";;;;", ";")
+                .replaceAll(";;;", ";").replaceAll(";;", ";").replaceAll(",", "")
+                .replaceAll("\n", ";").replaceAll("Summe;Darf;zum;eigenen;Gebrauch;photokopiert;werden;Copyright;©;2006;by;Fantasy;Productions;GmbH;alle;Rechte;vorbehalten.;;", "");
         textArea.setText(PDFContent);
     }
 
