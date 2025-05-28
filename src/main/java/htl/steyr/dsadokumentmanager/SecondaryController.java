@@ -2,16 +2,26 @@ package htl.steyr.dsadokumentmanager;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 
 import java.io.File;
-import java.lang.reflect.Array;
+import java.io.IOException;
+import java.net.URL;
+import java.util.Objects;
 
-public class HelloController {
-
+public class SecondaryController {
+@FXML
+    public Button NextButton;
     @FXML
     private TextField textField;
 
@@ -146,7 +156,6 @@ public class HelloController {
 
 
 
-
         /**
 
          Test Area:
@@ -170,7 +179,22 @@ public class HelloController {
 
     }
 
+    @FXML
+    public void onNextButtonClicked(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(DSADokumentenController.class.getResource("DSADokumenten-view.fxml"));
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setTitle("DSADokument");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
+
     public void pathTextField(ActionEvent actionEvent) {
         // You can handle events here if needed
     }
+
+
+
 }

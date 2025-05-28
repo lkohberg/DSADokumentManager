@@ -4,11 +4,16 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="htl.steyr.dsadokumentmanager.HelloController">
+<AnchorPane maxHeight="-Infinity" fx:controller="htl.steyr.dsadokumentmanager.SecondaryController" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="235.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="129.0" layoutY="58.0" mnemonicParsing="false" onAction="#onLoadButtonClicked" text="Load" />
-      <TextField fx:id="textField" layoutX="97.0" layoutY="152.0" />
-      <TextArea fx:id="textArea" layoutX="250.0" layoutY="29.0" prefHeight="592.0" prefWidth="535.0" />
+      <Button layoutX="54.0" layoutY="117.0" mnemonicParsing="false" onAction="#onLoadButtonClicked" prefHeight="37.0" prefWidth="96.0" text="Load" />
+      <TextField fx:id="textField" layoutX="24.0" layoutY="55.0" prefHeight="31.0" prefWidth="178.0" />
+      <TextArea fx:id="textArea" layoutX="227.0" layoutY="52.0" prefHeight="37.0" prefWidth="826.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextArea>
+      <Button fx:id="NextButton" layoutX="582.0" layoutY="118.0" mnemonicParsing="false" onAction="#onNextButtonClicked" prefHeight="54.0" prefWidth="116.0" text="Next" />
    </children>
 </AnchorPane>
