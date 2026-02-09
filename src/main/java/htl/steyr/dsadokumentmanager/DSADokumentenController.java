@@ -25,6 +25,7 @@ public class DSADokumentenController {
 
     public void initialize() {
 
+        // du netter mensch
 
         try {
             // Angenommen, Ihr Bild heißt "logo.png" - passen Sie den Namen entsprechend an
